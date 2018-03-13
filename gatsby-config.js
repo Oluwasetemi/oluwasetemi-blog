@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: 'Oluwasetemi\'s Blog',
+    title: 'Pandas Eating Lots',
   },
   plugins: [
     'gatsby-plugin-react-helmet',
@@ -10,5 +10,14 @@ module.exports = {
         pathToConfigModule: `src/utils/typography.js`,
       },
     },
+    `gatsby-plugin-glamor`,
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `src`,
+        path: `${__dirname}/src/`,
+      },
+    },
+    `gatsby-transformer-remark`
   ],
 };
